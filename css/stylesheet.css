@@ -1,0 +1,101 @@
+a{
+    text-decoration: none;
+    color: deeppink;
+}
+
+div{
+    color: deeppink;
+    background-color: rgb(65, 60, 60);
+}
+
+body{
+    background-color: rgb(65, 60, 60);
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.content div{
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+.nav{
+    height: 100px;
+    width: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-decoration: none;
+}
+
+.wide{
+    grid-column: span 2;
+}
+
+.high{
+    grid-row: span 2;
+}
+
+hr{
+    border-color: deeppink;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.centred-text{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.centred-image{
+    padding: 10px !important;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.smoelenfotos{
+    padding: 10px !important;
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+@media(max-width: 600px){
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: span 1;
+    }
+
+    .high{
+        grid-row: span 1;
+    }
+    .flex{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .nav{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
